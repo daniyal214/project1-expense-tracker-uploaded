@@ -4,10 +4,11 @@ import { TransactionContext } from './TransContext';
 
 function Child() {
 
-
+    
     let {transactions, addTransaction} = useContext(TransactionContext);
     let [newDesc, setDesc] = useState("");
     let [newAmount, setAmount] = useState("");
+    const returnedArray = Array.from(transactions)
 
     const handleAddition = (event) => {
         event.preventDefault();
@@ -60,8 +61,8 @@ function Child() {
 
         <h2> History </h2>
         <ul className='transaction-list'>
-            {transactions.map((transObj, ind) =>{
-                console.log(transactions)
+                
+            {returnedArray.map((transObj, ind) =>{
                 return ( 
                     <li key={ind}>
                 <span>{transObj.desc}</span>

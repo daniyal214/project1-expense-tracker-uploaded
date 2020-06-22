@@ -5,11 +5,11 @@ import TransReducer from './TransReducer';
 
 
 
-const initialTransaction = { transactions: [
-    {id:1, amount: 500, desc:'Cash'},
-    {id:2, amount: -200, desc:'Bill'},
+const initialTransaction = [
+    {amount: 500, desc:'Cash'},
+    {amount: -200, desc:'Bill'},
     
-]}
+]
 
 export const TransactionContext = createContext(initialTransaction);
 
